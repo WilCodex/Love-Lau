@@ -280,4 +280,15 @@ img {
     top: 87%;
     left: 45%;
   }
+  .laura__love {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 31.25rem) {
+  .laura__love {
+    font-size: 2rem;
+  }
+  .heart__float {
+    top: 60%;
+  }
 }
