@@ -4,9 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/assets/icon.svg" type="image/svg" />
     <title>Te amo Lau</title>
   </head>
   <body>
+    <span class="heart__float">😍</span>
+    <div class="laura__love">
+      TE AMO
+      <span class="close">
+        <img src="/public/assets/close.svg" />
+      </span>
+    </div>
     <section class="slider__container">
       <!-- Slider main container -->
       <div class="swiper">
@@ -47,6 +55,30 @@
         <div class="swiper-button-next"></div>
       </div>
     </section>
-    <script type="module" src="/main.js"></script>
+    <main class="content__container">
+      <div class="slider__wrapper">
+        <div class="slider__title">
+          <h2>“Yo viajo a tu lado con lo bueno y lo malo.”</h2>
+          <span class="slider__down slider__btn">
+            <img src="/public/assets/arrowUp.svg" />
+          </span>
+        </div>
+        <div class="slider__image">
+          <img src="/public/img/Slider/1.webp" class="image__slider" alt="" />
+          <span class="slider__up slider__btn">
+            <img src="/public/assets/arrowUp.svg" />
+          </span>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <video
+          src="/public/video/Victor Muñoz - Mi Princesa (Videoclip OFICIAL).mp4"
+          controls
+        ></video>
+      </div>
+    </footer>
+    <script type="module" src="/app.js"></script>
   </body>
 </html>
