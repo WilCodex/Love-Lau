@@ -1,11 +1,11 @@
-const { resolve } = require("path");
+import { resolve } from "path";
 
-module.exports = {
+export default {
   build: {
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        lau: resolve(__dirname, "laura.html")
+        Lau: resolve(__dirname, "Lau/index.html")
       }
     }
   }
