@@ -35,92 +35,92 @@ const swiper = new Swiper(".swiper", {
 });
 const IMAGES = [
   {
-    src: "/public/img/Slider//1.webp",
+    src: "/img/Slider//1.webp",
     color: "#f1b965",
     title: "“Yo viajo a tu lado con lo bueno y lo malo.”"
   },
   {
-    src: "/public/img/Slider/2.webp",
+    src: "/img/Slider/2.webp",
     color: "#C9A4A8",
     title: "“Lo mejor de mi vida es estar en la tuya”."
   },
   {
-    src: "/public/img/Slider/3.webp",
+    src: "/img/Slider/3.webp",
     color: "#2B6B67",
     title:
       "“Tú eres la historia más bonita que el destino escribió en mi vida”."
   },
   {
-    src: "/public/img/Slider/4.webp",
+    src: "/img/Slider/4.webp",
     color: "#5988B3",
     title: "“Pudo haber sido lindo, pero lo hiciste perfecto”."
   },
   {
-    src: "/public/img/Slider/5.webp",
+    src: "/img/Slider/5.webp",
     color: "#94AC88",
     title: "“Si sé lo que es el amor, es gracias a ti”."
   },
   {
-    src: "/public/img/Slider/6.webp",
+    src: "/img/Slider/6.webp",
     color: "#B74D55",
     title: "“Erase una vez… el amor”."
   },
   {
-    src: "/public/img/Slider/7.webp",
+    src: "/img/Slider/7.webp",
     color: "#465955",
     title: "“Por más momentos juntos”."
   },
   {
-    src: "/public/img/Slider/8.webp",
+    src: "/img/Slider/8.webp",
     color: "#62C982",
     title: "“Es una locura amar, a menos que se ame con locura”."
   },
   {
-    src: "/public/img/Slider/9.webp",
+    src: "/img/Slider/9.webp",
     color: "#6A863F",
     title:
       "“Solo hay dos momentos en que quiero estar contigo: Ahora y para Siempre”."
   },
   {
-    src: "/public/img/Slider/10.webp",
+    src: "/img/Slider/10.webp",
     color: "#0B181F",
     title: "“No te quiero para mí, te quiero conmigo. Es diferente”."
   },
   {
-    src: "/public/img/Slider/11.webp",
+    src: "/img/Slider/11.webp",
     color: "#1A1B24",
     title: "“Con todo mi amor, para toda la vida”"
   },
   {
-    src: "/public/img/Slider/12.webp",
+    src: "/img/Slider/12.webp",
     color: "#908DA3",
     title: "“El amor no necesita ser perfecto. Solo necesita ser verdadero”"
   },
   {
-    src: "/public/img/Slider/13.webp",
+    src: "/img/Slider/13.webp",
     color: "#B8727C",
     title:
       "“No es la historia más bonita, ni la más perfecta. Es la nuestra y con eso basta”."
   },
   {
-    src: "/public/img/Slider/14.webp",
+    src: "/img/Slider/14.webp",
     color: "#C6A487",
     title:
       "“Amar a alguien es poder ver toda su magia y recordársela cuando la olvide”"
   },
   {
-    src: "/public/img/Slider/15.webp",
+    src: "/img/Slider/15.webp",
     color: "#C38D8B",
     title:
       "“Una palabra nos libera de todo el peso y el dolor de la vida: esa palabra es amor”."
   },
   {
-    src: "/public/img/Slider/16.webp",
+    src: "/img/Slider/16.webp",
     color: "#D28584",
     title: "“Mis días son mejores contigo”."
   },
   {
-    src: "/public/img/Slider/17.webp",
+    src: "/img/Slider/17.webp",
     color: "#C39C9C",
     title: "“Eres mi principio y mi fin”."
   }
@@ -140,6 +140,12 @@ let currentIndex = 0;
 
 SLIDER_UP.addEventListener("click", () => {
   currentIndex++;
+  SLIDER_IMAGE.classList.add("slider__animation");
+  SLIDER_TITLE.classList.add("translate__animation");
+  setTimeout(() => {
+    SLIDER_IMAGE.classList.remove("slider__animation");
+    SLIDER_TITLE.classList.remove("translate__animation");
+  }, 500);
   if (currentIndex >= IMAGES.length) {
     currentIndex = 0;
   }
@@ -149,6 +155,12 @@ SLIDER_UP.addEventListener("click", () => {
 // Controlador de eventos para SLIDER_DOWN
 SLIDER_DOWN.addEventListener("click", () => {
   currentIndex--;
+  SLIDER_IMAGE.classList.add("translate__animation");
+  SLIDER_TITLE.classList.add("slider__animation");
+  setTimeout(() => {
+    SLIDER_IMAGE.classList.remove("translate__animation");
+    SLIDER_TITLE.classList.remove("slider__animation");
+  }, 500);
   if (currentIndex < 0) {
     currentIndex = IMAGES.length - 1;
   }

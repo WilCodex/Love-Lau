@@ -1,5 +1,4 @@
 @import url(/styles/firstSection.css);
-@import url(/styles/secondSection.css);
 :root {
   --font-family: Playfair;
   --envelope-color-primary: #ff9ce8;
@@ -127,7 +126,6 @@ img {
   display: flex;
   align-items: center;
   position: relative;
-  background-color: var(--envelope-color-primary);
 }
 .slider__title {
   width: 50%;
@@ -156,9 +154,29 @@ img {
 .slider__image {
   width: 50%;
   height: 100%;
-  background-color: aquamarine;
   position: relative;
-  transition: all 1s ease;
+}
+.slider__animation {
+  animation: translatePositive ease-in-out 0.5s;
+}
+.translate__animation {
+  animation: translateNegative ease-in-out 0.5s;
+}
+@keyframes translatePositive {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes translateNegative {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .slider__btn {
   width: 4rem;
@@ -213,18 +231,23 @@ img {
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+  text-align: center;
   font-size: 6rem;
   z-index: 10;
   color: aliceblue;
   font-weight: bolder;
   animation: title ease 4s infinite;
-  background-color: #ff9ce87c;
+  background-color: #eb6ccd7c;
 }
 .close {
-  width: 6.5rem;
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
   top: 0;
   right: 0;
-  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: start;
 }
 @media screen and (max-width: 48rem) {
   .slider__wrapper {

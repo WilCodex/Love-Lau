@@ -21,12 +21,11 @@ const GIFT_CLICK = document.querySelector(".gift__click");
 const GIFT_VIDEO = document.querySelector(".gift__video");
 GIFT_CLICK.addEventListener("click", () => {
   const jsConfetti = new JSConfetti();
-  setInterval(() => {
-    jsConfetti.addConfetti({
-      emojis: ["😍", "❤️", "💕", "😘"],
-      emojiSize: 50
-    });
-  }, 2000);
+
+  jsConfetti.addConfetti({
+    emojis: ["😍", "❤️", "💕", "😘"],
+    emojiSize: 50
+  });
   GIFT_CLICK.classList.toggle("animated__gift");
   GIFT_VIDEO.style.display = "flex";
   const VIDEO = GIFT_VIDEO.querySelector("video");
